@@ -1,6 +1,6 @@
 pkgname=deemixplus
 pkgver=0.5.1.r2b9a686
-pkgrel=1
+pkgrel=2
 pkgdesc="Deemix+ desktop app with playback and download support"
 arch=('x86_64')
 url="https://github.com/ALi3naTEd0/deemix"
@@ -60,6 +60,9 @@ package() {
 
 	install -d "$pkgdir/opt/deemixplus"
 	cp -a "$appdir/." "$pkgdir/opt/deemixplus/"
+	# electron-packager creates its output folders as 0700 and cp -a keeps that,
+	# which would leave the app readable only by root
+	chmod -R u=rwX,go=rX "$pkgdir/opt/deemixplus"
 	install -Dm644 "$srcdir/deemix/LICENSE.txt" \
 		"$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
 	install -Dm644 "$srcdir/deemix/packages/gui/build/64x64.png" \
