@@ -1,7 +1,7 @@
-pkgname=deemix-git
+pkgname=deemixplus
 pkgver=0.5.1.r378d15b
 pkgrel=1
-pkgdesc="Deemix desktop app with playback and download support"
+pkgdesc="Deemix+ desktop app with playback and download support"
 arch=('x86_64')
 url="https://github.com/ALi3naTEd0/deemix"
 license=('GPL-3.0-only')
@@ -58,27 +58,27 @@ package() {
 
 	[[ -d "$appdir" ]] || error "Electron bundle not found: $appdir"
 
-	install -d "$pkgdir/opt/deemix"
-	cp -a "$appdir/." "$pkgdir/opt/deemix/"
+	install -d "$pkgdir/opt/deemixplus"
+	cp -a "$appdir/." "$pkgdir/opt/deemixplus/"
 	install -Dm644 "$srcdir/deemix/LICENSE.txt" \
 		"$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
 	install -Dm644 "$srcdir/deemix/packages/gui/build/64x64.png" \
-		"$pkgdir/usr/share/pixmaps/deemix.png"
+		"$pkgdir/usr/share/pixmaps/deemixplus.png"
 
 	install -d "$pkgdir/usr/bin"
-	cat > "$pkgdir/usr/bin/deemix" <<'EOF'
+	cat > "$pkgdir/usr/bin/deemixplus" <<'EOF'
 #!/bin/sh
-exec /opt/deemix/deemix-gui "$@"
+exec /opt/deemixplus/deemix-gui "$@"
 EOF
-	chmod 755 "$pkgdir/usr/bin/deemix"
+	chmod 755 "$pkgdir/usr/bin/deemixplus"
 
 	install -d "$pkgdir/usr/share/applications"
-	cat > "$pkgdir/usr/share/applications/deemix.desktop" <<'EOF'
+	cat > "$pkgdir/usr/share/applications/deemixplus.desktop" <<'EOF'
 [Desktop Entry]
 Name=Deemix+
 Comment=Desktop audio player and download manager
-Exec=deemix %U
-Icon=deemix
+Exec=deemixplus %U
+Icon=deemixplus
 Terminal=false
 Type=Application
 Categories=AudioVideo;Audio;Player;
