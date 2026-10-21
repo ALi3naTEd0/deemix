@@ -31,3 +31,9 @@ packages/webui/public/js/*
 .turbo
 tsconfig.tsbuildinfo
 vite.config.*.timestamp-*
+
+# makepkg (PKGBUILD) build directories and packages
+/deemix/
+/src/
+/pkg/
+*.pkg.tar.*

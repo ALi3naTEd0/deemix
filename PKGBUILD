@@ -1,5 +1,5 @@
 pkgname=deemixplus
-pkgver=0.5.1.r378d15b
+pkgver=0.5.1.r2b9a686
 pkgrel=1
 pkgdesc="Deemix+ desktop app with playback and download support"
 arch=('x86_64')
@@ -38,7 +38,7 @@ depends=(
 	'zlib'
 )
 makedepends=('git' 'nodejs>=24' 'pnpm')
-_commit=378d15b33568ab223bd03bc3df7441d680dd8337
+_commit=2b9a686a244118308d6eef695d1ae31092d983ab
 source=("git+https://github.com/ALi3naTEd0/deemix.git#commit=${_commit}")
 sha256sums=('SKIP')
 
