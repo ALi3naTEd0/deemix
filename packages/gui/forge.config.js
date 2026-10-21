@@ -1,6 +1,6 @@
 export default {
 	packagerConfig: {
-		name: "Deemix",
+		name: "Deemix+",
 		asar: true,
 		prune: false,
 		ignore: [
@@ -31,7 +31,7 @@ export default {
 			config: {
 				options: {
 					name: "deemix",
-					productName: "Deemix",
+					productName: "Deemix+",
 					section: "sound",
 					icon: "./build/icon.ico",
 					categories: ["Audio"],

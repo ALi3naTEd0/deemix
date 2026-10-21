@@ -138,9 +138,9 @@ const router = createRouter({
 
 router.beforeEach((to, _, next) => {
 	if (to.name && to.name !== "Home") {
-		document.title = to.name.toString() + " · Deemix";
+		document.title = to.name.toString() + " · Deemix+";
 	} else {
-		document.title = "Deemix";
+		document.title = "Deemix+";
 	}
 
 	switch (to.name) {

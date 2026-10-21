@@ -12,3 +12,8 @@ allowBuilds:
   macos-alias: true
   utf-8-validate: true
   vue-demi: true
+
+overrides:
+  # extract-zip 2.0.1 (used by @electron/packager) hangs on Node >= 26 with
+  # yauzl 2.x: unpacking the Electron zip stops early and never resolves
+  yauzl: ^3.2.0
