@@ -31,7 +31,7 @@ const fr = {
 			playlist: "playlist | playlists",
 			compile: "compilation | compilations",
 			ep: "ep | eps",
-			bundle: "bundle | bundles",
+			bundle: "lot | lots",
 			more: "Plus d'albums",
 			featured: "Apparaît dans",
 			spotifyPlaylist: "playlist spotify | playlists spotify",
@@ -54,69 +54,21 @@ const fr = {
 		},
 		updates: {
 			currentVersion: "Version Actuelle Du Logiciel",
-			currentWebuiVersion: "Version Actuelle De La WebUI",
+			currentWebuiVersion: "Version Actuelle De l'Interface Web",
+			currentGuiVersion: "Version Actuelle De l'Interface Graphique",
 			versionNotAvailable: "N/A",
-			updateAvailable:
-				"Vous n'utilisez pas la dernière version disponible : {version}",
+			updateAvailable: `Une mise à jour est disponible : {version}`,
 			deemixVersion: "Version Actuelle De La Bibliothèque deemix",
 		},
 		titles: {
-			usefulLinks: "Liens Utiles",
-			bugReports: "Rapports De Bug",
-			contributing: "Contribution",
-			donations: "Dons",
+			bugReportsContributing: "Signalement De Bugs Et Contribution",
 			license: "Licence",
 		},
-		subtitles: {
-			bugReports:
-				"Quelque chose ne fonctionne pas dans deemix ? Contactez-nous !",
-			contributing:
-				"Vous souhaitez contribuer à ce projet ? Vous pouvez le faire de différentes manières !",
-			donations:
-				"Vous souhaitez contribuer financièrement ? Vous pouvez faire un don !",
-		},
-		usesLibrary:
-			"Cette application utilise la bibliothèque <strong>deemix</strong>, que vous pouvez exploiter afin de créer votre propre interface utilisateur pour deemix.",
-		thanks:
-			"Merci à <strong>rtonno</strong>, <strong>uhwot</strong> et <strong>lollilol</strong> de m'avoir aidé dans ce projet ainsi qu'à <strong>BasCurtiz</strong> pour la création de l'icône.",
-		upToDate: {
-			text: `Restez informé des mises à jour en suivant le {newsChannel} sur Telegram.`,
-			newsChannel: "canal d'informations",
-		},
-		officialWebsite: "Site Officiel",
-		officialRepo: "Répertoire De Dépôt Officiel De La Bibliothèque",
-		officialWebuiRepo: "Répertoire De Dépôt Officiel De La WebUI",
-		officialSubreddit: "Subreddit Officiel",
-		newsChannel: "Canal d'Informations",
-		devlogChannel: "Canal De Développement",
-		questions: {
-			text: `Si vous avez des questions ou des problèmes avec l'application, cherchez d'abord une solution dans le {subreddit}. Ensuite, si la solution ne s'y trouve pas, vous pouvez publier un message dans le subreddit en décrivant votre problème.`,
-			subreddit: "subreddit",
-		},
-		beforeReporting:
-			"Avant de signaler un bug, assurez-vous que vous utilisez la version la plus récente de l'application. Vérifiez que vous souhaitez nous rapporter un bug et non quelque chose qui ne fonctionne pas uniquement de votre côté.",
-		beSure:
-			"Assurez-vous que le bug soit reproductible sur d'autres appareils mais aussi de <strong>NE PAS</strong> signaler un bug si celui-ci a déjà été recensé.",
+		officialRepo: "Contribuer sur GitHub",
+		beforeReporting: `Avant de signaler un bug, assurez-vous que vous utilisez la version la plus récente de l'application et que ce que vous souhaitez signaler est bel et bien un bug, et non un problème qui ne se produit que de votre côté.`,
+		beSure: `Assurez-vous que le bug est reproductible sur d'autres appareils et <strong>NE</strong> signalez <strong>PAS</strong> un bug si celui-ci a déjà été recensé.`,
 		duplicateReports:
-			"Les rapports de bug répétitifs seront supprimés, merci d'en prendre bonne note.",
-		dontOpenIssues:
-			"<strong>NE PAS</strong> rapporter de problème s'il ne s'agit que de simples questions. Un subreddit existe pour ces questions.",
-		newUI: {
-			text: `Si vous maîtrisez python, vous pouvez essayer de créer une nouvelle interface utilisateur pour l'application à l'aide de la bibliothèque de base, ou corriger des bugs dans la bibliothèque à l'aide d'une demande de fusion de branches (pull request) sur le {repo}.`,
-			repo: "répertoire de dépôt",
-		},
-		acceptFeatures:
-			"J'accepte également les nouvelles fonctionnalités, mais pas de choses complexes, dans la mesure où elles peuvent être implémentées directement dans l'application et non dans la bibliothèque.",
-		otherLanguages:
-			"Si vous maîtrisez un autre langage de programmation, vous pouvez essayer de transposer deemix dans ce dernier !",
-		contributeWebUI: {
-			text: `Si vous vous y connaissez en Vue.js (JavaScript), HTML ou CSS, vous pouvez contribuer à la {webui}.`,
-			webui: "WebUI",
-		},
-		itsFree:
-			"N'oubliez pas que <strong>ce projet est libre</strong> et qu'il est important de <strong>soutenir vos artistes préférés</strong> avant de supporter les développeurs.",
-		notObligated:
-			"Ne vous sentez pas obligé de faire un don, vous êtes tout de même apprécié !",
+			"Les rapports de bugs identiques seront clôturés, faites donc preuve de vigilance à ce sujet.",
 		licencedUnder: {
 			text: `Ce projet s'inscrit dans le cadre de la {gpl3}.`,
 			gpl3: "Licence publique générale GNU, version 3",
@@ -164,7 +116,7 @@ const fr = {
 	},
 	favorites: {
 		title: "Favoris",
-		noPlaylists: "Aucune Playlist Favorite n'a été trouvée",
+		noPlaylists: "Aucune Playlist n'a été trouvée",
 		noAlbums: "Aucun Album Favori n'a été trouvé",
 		noArtists: "Aucun Artiste Favori n'a été trouvé",
 		noTracks: "Aucune Piste Favorite n'a été trouvée",
@@ -231,6 +183,8 @@ const fr = {
 		loggedIn: "Connecté",
 		alreadyLogged: "Déjà connecté",
 		loginFailed: "Connexion impossible",
+		invalidArl:
+			"ARL invalide. Copiez uniquement la valeur du cookie — sans espaces, ni guillemets ni texte superflu.",
 		loggedOut: "Déconnecté",
 		cancellingCurrentItem: "Annulation de l'élément actuel.",
 		currentItemCancelled: "Élément actuel annulé.",
@@ -310,7 +264,7 @@ const fr = {
 							"Il s'agit de votre ARL personnel, vous pouvez maintenant l'utiliser dans l'application.",
 					},
 				},
-				update: "Forcer la réactualisation de l'ARL",
+				update: "Se connecter avec l'ARL",
 			},
 			logout: "Déconnexion",
 		},
@@ -503,6 +457,8 @@ const fr = {
 			clientID: "Client ID Spotify",
 			clientSecret: "Client Secret Spotify",
 			username: "Nom d'utilisateur Spotify",
+			usernameHint:
+				"Votre nom d'utilisateur public, utilisé pour récupérer vos playlists publiques. Il ne s'agit pas du nom d'utilisateur que vous utilisez pour vous connecter.",
 			question: "Comment activer les Fonctionnalités Spotify ?",
 			howTo: {
 				prologue: {
